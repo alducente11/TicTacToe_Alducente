@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Multiplayer";
+}
+
+<div class="game-container" style="background-color: #1e1e2f; padding: 20px; border-radius: 15px; max-width: 600px; margin: 50px auto; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
+    <div class="scoreboard" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <div class="player-card" id="player1-card" style="text-align: center; color: #fff;">
+            <div class="icon" style="font-size: 30px; margin-bottom: 5px;">⭕</div>
+            <div class="player-info">
+                <h3>Player 1</h3>
+                <p id="player1Wins">0 wins</p>
+            </div>
+        </div>
+        <div class="turn-indicator" id="turnIndicator" style="color: #fff; align-self: center;">Player X's Turn</div>
+        <div class="player-card" id="player2-card" style="text-align: center; color: #fff;">
+            <div class="icon" style="font-size: 30px; margin-bottom: 5px;">❌</div>
+            <div class="player-info">
+                <h3>Player 2</h3>
+                <p id="player2Wins">0 wins</p>
+            </div>
+        </div>
+    </div>
+
+    <table id="board" class="tic-tac-toe-board" style="margin: 0 auto; border-spacing: 5px;">
+        @for (int i = 0; i < 3; i++)
+        {
+            <tr>
+                @for (int j = 0; j < 3; j++)
+                {
+                    <td onclick="makeMove(@i,@j)" data-cell
+                        style="width: 80px; height: 80px; background-color: #282a36; border-radius: 10px;
+                        text-align: center; font-size: 30px; color: #fff; cursor: pointer;"></td>
+                }
+            </tr>
+        }
+    </table>
+
+    <button onclick="restartGame()" class="restart-btn"
+            style="margin-top: 20px; padding: 5px 15px; background-color: #ff79c6; border: none;
+        border-radius: 5px; color: #fff; cursor: pointer;">
+        Restart
+    </button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.12/signalr.min.js"></script>
+<script src="/js/multiplayer.js"></script>

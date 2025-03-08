@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "";
+}
+
+<h1>Welcome to Tic-Tac-Toe</h1>
+<a href="/Game/AI" class="btn btn-primary">Play with AI</a>
+<a href="/Game/Multiplayer" class="btn btn-secondary">Multiplayer</a>
+
+<table id="board">
+    <tr>
+        <td onclick="makeMove(0,0)"></td>
+        <td onclick="makeMove(0,1)"></td>
+        <td onclick="makeMove(0,2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(1,0)"></td>
+        <td onclick="makeMove(1,1)"></td>
+        <td onclick="makeMove(1,2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(2,0)"></td>
+        <td onclick="makeMove(2,1)"></td>
+        <td onclick="makeMove(2,2)"></td>
+    </tr>
+</table>
+
+<h2 id="status"></h2>
+<button onclick="restartGame()">Restart</button>
+
+<script src="~/js/game.js"></script>

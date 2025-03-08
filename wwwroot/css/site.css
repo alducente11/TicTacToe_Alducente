@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    background-color: #0b2559;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.player-card {
+    background-color: #193875;
+    border-radius: 10px;
+    padding: 15px;
+    width: 160px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+    .player-card:hover {
+        transform: scale(1.05);
+    }
+
+/* Player Icons */
+.icon {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+/* Tic-Tac-Toe Board */
+.tic-tac-toe-board {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .tic-tac-toe-board td {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #0a1f44;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        background-color: #193875;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+        /* Hover & Click Effects */
+        .tic-tac-toe-board td:hover {
+            background-color: #2456a0;
+            transform: scale(1.05);
+        }
+
+/* Restart Button */
+.restart-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #1f4ca5;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    .restart-btn:hover {
+        background-color: #163a81;
+        transform: scale(1.05);
+    }
+
+/* Turn Indicator */
+.turn-indicator {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px 0;
+}
+

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Tic-Tac-Toe";
+}
+<h1>Tic-Tac-Toe</h1>
+
+<table id="board">
+    <tr>
+        <td onclick="makeMove(0,0)"></td>
+        <td onclick="makeMove(0,1)"></td>
+        <td onclick="makeMove(0,2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(1,0)"></td>
+        <td onclick="makeMove(1,1)"></td>
+        <td onclick="makeMove(1,2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(2,0)"></td>
+        <td onclick="makeMove(2,1)"></td>
+        <td onclick="makeMove(2,2)"></td>
+    </tr>
+</table>
+
+<h2 id="status"></h2>
+<button onclick="restartGame()">Restart</button>
+
+<script src="~/js/game.js"></script>
